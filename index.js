@@ -40,13 +40,6 @@ function createItem(item) {
         saveTasks(currentTasks);
     });
 
-    textElement.addEventListener('keydown', function (event) {
-        if (event.key === 'Enter') {
-            event.preventDefault();
-            textElement.blur();
-        }
-    });
-
     deleteButton.addEventListener('click', function () {
         clone.remove();
         const currentTasks = getTasksFromDOM();
